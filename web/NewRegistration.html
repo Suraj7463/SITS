@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.tatamotors.com</title>
+	<style type="text/css">
+		#brandname{
+			background-color: tomato;
+			color: white;
+			padding: 10px;
+
+		}
+		body{
+			margin: 0px;
+
+		}
+		p{
+			margin-top: -24px;
+			font-size: 23px;
+			font-style: italic;
+		}
+		#loginformdiv{
+			background-color: springgreen;
+			padding: 20px;
+			width: 30%;
+			margin-left: 450px;
+			margin-top: 20px;
+			border-radius: 5px;
+		}
+		.inputclass{
+			padding: 8px;
+			border-radius: 5px;
+			width: 95%;
+			border-color: none;
+                       
+                        
+
+
+		}
+                .btn{
+                    padding: 5px;
+			border-radius: 5px;
+			width: 60%;
+			margin-left:600px;
+                        margin-top: 5px;
+			border-color: none;
+			background-color: white;
+			color: white;
+			font-size: 20px;
+			background-color: blue;
+			border-radius: 15px;
+                        
+                    
+                }
+                .btn:hover{
+                    color: red;
+                    background-color: white;
+                }
+                
+		.buttonclass{
+			padding: 5px;
+			border-radius: 5px;
+			width: 60%;
+			margin: 30px;
+			border-color: none;
+			background-color: white;
+			color: white;
+			font-size: 20px;
+			background-color: blue;
+			border-radius: 15px;
+                       
+          
+
+
+		}
+                .buttonclass{
+                    cursor:pointer;
+                }
+		#s1{
+			margin-left: 50%;
+		}
+               
+                #rd{
+                    margin-right: 140px;
+                }
+                
+                
+/*		.datashift{
+			float: right;
+		}*/
+		.buttonclass:hover{
+			background-color: red;
+		}
+	</style>
+        <script type="text/javascript">
+		function myfun()
+		{
+			var serlist="";
+			for(i=0;i<=5;i++)
+			{
+				if(document.f1.tech[i].checked==true)
+				{
+					serlist=serlist+"  "+document.f1.tech[i].value;
+				}
+			}
+			document.f1.tech_list.value=serlist;
+		}
+	</script>
+</head>
+<body bgcolor="greenyello">
+	<div id="brandname">
+		<h1>SITS</h1>
+		<P>Education Services</P>
+		
+	</div>
+	<div id="loginformdiv">
+            <a href="Dashboard.html"><input type="submit" value="Go To Dashboard" class="btn"></a>
+                                
+		<center>
+			<form name="f1" action="Registration" method="post">
+			<table width="100%" cellpadding="5" align="center">
+				<tr>
+					<td class="datashift">First Name</td>
+					<td><input type="text" name="f_name" class="inputclass"></td>
+				</tr>
+
+				<tr>
+					<td class="datashift">Last Name</td>
+					<td><input type="text" name="l_name" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">Branch</td>
+					<td>
+						<select name="comp_branch">
+							<option disabled selected>-----------Select Branch---------</option>
+							<option value="Computer">Computer</option>
+							<option value="Mechanical">Mechanical</option>
+							<option value="Electrical">Electrical</option>
+							<option value="ENTC">ENTC</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="datashift">PhoneNo</td>
+					<td><input type="text" name="phone_no" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">Email</td>
+					<td><input type="email" name="email" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td>Technical Skill</td>
+					<td><input type="checkbox" name="tech" value="java" onclick="myfun()">JAVA
+						<input type="checkbox" name="tech" value="python" onclick="myfun()">PYTHON
+                                                <input type="checkbox" name="tech" value="php" onclick="myfun()">PHP
+                                                <input type="checkbox" name="tech" value="django" onclick="myfun()">DJANGO
+                                                <input type="checkbox" name="tech" value="cpp" onclick="myfun()">CPP
+                                                <input type="checkbox" name="tech" value="c" onclick="myfun()">C
+					</td>
+				</tr>
+				<tr>
+					<td>Technology List</td>
+					<td><input type="text" name="tech_list" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					
+                                        <td><input type="radio" name="gen" value="Male">Male
+                                            <input type="radio" name="gen" value="Female">Female</td>
+					
+				</tr>
+				
+
+				<tr>
+                                    
+                                    <td><input type="submit" value="Register" class="buttonclass"></td>
+                                    
+                           
+				
+				
+					<td>
+                                            <input type="reset" value="Reset" class="buttonclass" id="r">
+                                        </td>
+                                        
+				</tr>
+                                
+			</table>
+		</form>
+		</center>
+		
+	</div>
+
+</body>
+</html>

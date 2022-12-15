@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.tatamotors.com</title>
+	<script type="text/javascript">
+	
+	
+		function show_current_date()
+		{
+			var d=new Date();
+
+			var dd=d.getDate();
+			var months=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+			var mm=months[d.getMonth()];
+
+			var yy=d.getFullYear();
+			var cdate=dd+"/"+mm+"/"+yy;
+
+			document.f1.showdate.value=cdate;
+
+		}
+	</script>
+	<style type="text/css">
+		#brandname{
+			background-color: tomato;
+			color: white;
+			padding: 10px;
+
+		}
+		body{
+			margin: 0px;
+
+		}
+		p{
+			margin-top: -24px;
+			font-size: 23px;
+			font-style: italic;
+		}
+		#loginformdiv{
+			background-color: tomato;
+			padding: 20px;
+			width: 40%;
+			margin-left: 450px;
+			margin-top: 20px;
+			border-radius: 5px;
+		}
+		.inputclass{
+			padding: 8px;
+			border-radius: 5px;
+			width: 95%;
+			border-color: none;
+	
+
+
+		}
+		.buttonclass{
+			padding: 5px;
+			border-radius: 5px;
+			width: 50%;
+			margin-left: 60px;
+			border-color: none;
+			background-color: white;
+			color: white;
+			font-size: 20px;
+			background-color: blue;
+			border-radius: 15px;
+
+
+		}
+		#s1{
+			margin-left: 50%;
+		}
+		.datashift{
+			float: right;
+		}
+		.buttonclass:hover{
+			background-color: red;
+		}
+	</style>
+</head>
+<body onload="show_current_date()">
+	<div id="brandname">
+		<h1>JSPM</h1>
+		<P>Candidate PettyCash</P>
+		
+	</div>
+	<form action="PettyCash" method="post" name="f1">
+	<div id="loginformdiv">
+		<center>
+		
+			<table width="100%" cellpadding="5" align="center">
+				<tr>
+					<td class="datashift">Purchesd Date</td>
+					<td><input type="text" name="showdate" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Purchased Day</td>
+					<td><input type="text" name="day" class="inputclass" ></td>
+				</tr> 
+
+				<tr>
+					<td class="datashift">Product Name</td>
+					<td><input type="text" name="product" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Rate</td>
+					<td><input type="text" name="rate" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Quantity</td>
+					<td><input type="text" name="qty" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">BillAmount</td>
+					<td><input type="text" name="amount" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Purchased From</td>
+					<td><input type="text" name="purchase" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Purchased By</td>
+					<td><input type="text" name="purch_by" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Purpose of Purchased</td>
+					<td><textarea name="purpose"  cols="30" rows="5"></textarea></td>
+				</tr>
+				<tr>
+					<td class="datashift">Approval By</td>
+					<td><textarea name="aprove"  cols="30" rows="5"></textarea></td>
+				</tr>
+				
+				
+
+				<tr>
+					<td><input type="submit" value="Register" class="buttonclass"></td>
+				
+				
+					<td>
+						<input type="reset" value="Reset" class="buttonclass">
+
+					</td>
+				</tr>
+			</table>
+		
+		</center>
+		
+	</div>
+</form>
+
+</body>
+</html>

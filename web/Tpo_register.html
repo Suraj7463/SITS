@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.tatamotors.com</title>
+	<script type="text/javascript">
+		function show_current_date()
+		{
+			var d=new Date();
+
+			var dd=d.getDate();
+			var months=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+			var mm=months[d.getMonth()];
+
+			var yy=d.getFullYear();
+			var cdate=dd+"/"+mm+"/"+yy;
+
+			document.f1.showdate.value=cdate;
+
+		}
+	</script>
+	<style type="text/css">
+		#brandname{
+			background-color: tomato;
+			color: white;
+			padding: 10px;
+
+		}
+		body{
+			margin: 0px;
+
+		}
+		p{
+			margin-top: -24px;
+			font-size: 23px;
+			font-style: italic;
+		}
+		#loginformdiv{
+			background-color: tomato;
+			padding: 20px;
+			width: 40%;
+			margin-left: 450px;
+			margin-top: 20px;
+			border-radius: 5px;
+		}
+		.inputclass{
+			padding: 8px;
+			border-radius: 5px;
+			width: 95%;
+			border-color: none;
+	
+
+
+		}
+		.buttonclass{
+			padding: 5px;
+			border-radius: 5px;
+			width: 50%;
+			margin-left: 60px;
+			border-color: none;
+			background-color: white;
+			color: white;
+			font-size: 20px;
+			background-color: blue;
+			border-radius: 15px;
+
+
+		}
+		#s1{
+			margin-left: 50%;
+		}
+		.datashift{
+			float: right;
+		}
+		.buttonclass:hover{
+			background-color: red;
+		}
+	</style>
+</head>
+<body onload="show_current_date()">
+	<div id="brandname">
+		<h1>JSPM</h1>
+		<P>Candidate Interview Detail</P>
+		
+	</div>
+	<form action="tposervlet" method="post" name="f1">
+	<div id="loginformdiv">
+		<center>
+		
+			<table width="100%" cellpadding="5" align="center">
+				<tr>
+					<td class="datashift">Date of Registration</td>
+					<td><input type="text" name="showdate" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Company Name</td>
+					<td><input type="text" name="cname" class="inputclass" ></td>
+				</tr> 
+                                <tr>
+					<td class="datashift">HR Name</td>
+					<td><input type="text" name="hname" class="inputclass"></td>
+				</tr>
+
+				<tr>
+					<td class="datashift">HR phone no</td>
+					<td><input type="text" name="phoneno" class="inputclass" ></td>
+				</tr>
+				
+				<tr>
+					<td class="datashift">HR Email</td>
+					<td><input type="email" name="email" class="inputclass"></td>
+				</tr>
+				
+				<tr>
+					<td class="datashift">Company Address</td>
+					<td><textarea name="cadd" cols="30" rows="5">
+						
+					</textarea></td>
+				</tr>
+				<tr>
+					<td class="datashift">Campus Date</td>
+					<td><input type="date" name="cdate" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">Registerd By</td>
+					<td><input type="text" name="register_by" class="inputclass"></td>
+				</tr>
+
+
+				
+
+				<tr>
+					<td><input type="submit" value="Register" class="buttonclass"></td>
+				
+				
+					<td>
+						<input type="reset" value="Reset" class="buttonclass">
+
+					</td>
+				</tr>
+			</table>
+		
+		</center>
+		
+	</div>
+</form>
+
+</body>
+</html>

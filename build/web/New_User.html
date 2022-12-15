@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.tatamotors.com</title>
+	<style type="text/css">
+		#brandname{
+			background-color: tomato;
+			color: white;
+			padding: 10px;
+
+		}
+		body{
+			margin: 0px;
+
+		}
+		p{
+			margin-top: -24px;
+			font-size: 23px;
+			font-style: italic;
+		}
+		#loginformdiv{
+			background-color: springgreen;
+			padding: 20px;
+			width: 30%;
+			margin-left: 450px;
+			margin-top: 20px;
+			border-radius: 5px;
+		}
+		.inputclass{
+			padding: 8px;
+			border-radius: 5px;
+			width: 95%;
+			border-color: none;
+                        
+
+
+		}
+		.buttonclass{
+			padding: 5px;
+			border-radius: 5px;
+			width: 50%;
+			margin-left: 60px;
+			border-color: none;
+			background-color: white;
+			color: white;
+			font-size: 20px;
+			background-color: blue;
+			border-radius: 15px;
+          
+
+
+		}
+               
+		#s1{
+			margin-left: 50%;
+		}
+		.datashift{
+			float: right;
+		}
+		.buttonclass:hover{
+			background-color: red;
+		}
+	</style>
+        
+</head>
+<body bgcolor="greenyello">
+	<div id="brandname">
+		<h1>SITS</h1>
+		<P>Education Services</P>
+		
+	</div>
+	<div id="loginformdiv">
+		<center>
+			<form name="f1" action="newuserservlet" method="post">
+			<table width="100%" cellpadding="5" align="center">
+				<tr>
+					<td class="datashift">First Name</td>
+					<td><input type="text" name="fname" class="inputclass"></td>
+				</tr>
+
+				<tr>
+					<td class="datashift">Last Name</td>
+					<td><input type="text" name="lname" class="inputclass"></td>
+				</tr>
+                                <tr>
+					<td class="datashift">username</td>
+					<td><input type="text" name="uname" class="inputclass"></td>
+				</tr>
+                                <tr>
+					<td class="datashift">password</td>
+					<td><input type="password" name="pass" class="inputclass"></td>
+				</tr>
+                                <tr>
+					<td class="datashift">Retypepassword</td>
+					<td><input type="text" name="retype" class="inputclass"></td>
+				</tr>
+				
+				<tr>
+					<td class="datashift">PhoneNo</td>
+					<td><input type="text" name="phone" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">Email</td>
+					<td><input type="email" name="email" class="inputclass"></td>
+				</tr>
+                            <tr colspan="2">
+					<td><input type="submit" value="Register" class="buttonclass"></td>
+				
+				
+					<td>
+						<input type="reset" value="Reset" class="buttonclass">
+                                        </td>
+                                        
+				</tr>
+			</table>
+		</form>
+		</center>
+		
+	</div>
+
+</body>
+</html>

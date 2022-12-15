@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.tatamotors.com</title>
+	<script type="text/javascript">
+	
+		function fun_result(){
+			
+			var tech=parseInt(document.f1.tech_round.value);
+			var apty=parseInt(document.f1.apty_round.value);
+			var hr=parseInt(document.f1.hr_round.value);
+
+			var tm=tech + apty + hr;
+
+			document.f1.total_mark.value=tm;
+
+			if(tech>=50 && apty>=50 && hr>=50)
+			{
+				document.f1.result.value="Selected";
+			}
+			else{
+				document.f1.result.value="Rejected";
+			}
+
+
+		}
+		function show_current_date()
+		{
+			var d=new Date();
+
+			var dd=d.getDate();
+			var months=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+			var mm=months[d.getMonth()];
+
+			var yy=d.getFullYear();
+			var cdate=dd+"/"+mm+"/"+yy;
+
+			document.f1.showdate.value=cdate;
+
+		}
+	</script>
+	<style type="text/css">
+		#brandname{
+			background-color: blue;
+			color: white;
+			padding: 10px;
+
+		}
+		body{
+			margin: 0px;
+
+		}
+		p{
+			margin-top: -24px;
+			font-size: 23px;
+			font-style: italic;
+		}
+		#loginformdiv{
+			background-color: aqua;
+			padding: 20px;
+			width: 30%;
+			margin-left: 450px;
+			margin-top: 20px;
+			border-radius: 5px;
+		}
+		.inputclass{
+			padding: 8px;
+			border-radius: 5px;
+			width: 95%;
+			border-color: none;
+	
+
+
+		}
+		.buttonclass{
+			padding: 5px;
+			border-radius: 5px;
+			width: 50%;
+			margin-left: 60px;
+			border-color: none;
+			background-color: white;
+			color: white;
+			font-size: 20px;
+			background-color: blue;
+			border-radius: 15px;
+
+
+		}
+		#s1{
+			margin-left: 50%;
+		}
+		.datashift{
+			float: right;
+		}
+		.buttonclass:hover{
+			background-color: red;
+		}
+	</style>
+</head>
+<body onload="show_current_date()" bgcolor="aquamarine">
+	<div id="brandname">
+		<h1>JSPM</h1>
+		<P>Fill Candidate Interview Detail In This Form</P>
+		
+	</div>
+	<form action="InterviewServlet" method="post" name="f1">
+	<div id="loginformdiv">
+		<center>
+		
+			<table width="100%" cellpadding="5" align="center">
+				<tr>
+					<td class="datashift">Date</td>
+					<td><input type="text" name="showdate" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">First Name</td>
+					<td><input type="text" name="fname" class="inputclass" ></td>
+				</tr> 
+
+				<tr>
+					<td class="datashift">Last Name</td>
+					<td><input type="text" name="lname" class="inputclass" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Branch</td>
+					<td>
+						<select name="branch">
+							<option disabled selected>-----------Select Branch---------</option>
+							<option value="Computer">Computer</option>
+							<option value="Mechanical">Mechanical</option>
+							<option value="Electrical">Electrical</option>
+							<option value="IT">it</option>
+							<option value="ENTC">ENTC</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="datashift">Tech Round</td>
+					<td><input type="text" name="tech_round" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">Apty Round</td>
+					<td><input type="text" name="apty_round" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">HR Round</td>
+					<td><input type="text" name="hr_round" class="inputclass" onkeyup="fun_result()" ></td>
+				</tr>
+				<tr>
+					<td class="datashift">Total Mark</td>
+					<td><input type="text" name="total_mark" class="inputclass"></td>
+				</tr>
+				<tr>
+					<td class="datashift">Result</td>
+					<td><input type="text" name="result" class="inputclass"></td>
+				</tr>
+
+				
+
+				<tr>
+					<td><input type="submit" value="Register" class="buttonclass"></td>
+				
+				
+					<td>
+						<input type="reset" value="Reset" class="buttonclass">
+
+					</td>
+				</tr>
+			</table>
+		
+		</center>
+		
+	</div>
+</form>
+
+</body>
+</html>

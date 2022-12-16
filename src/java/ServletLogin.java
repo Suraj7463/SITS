@@ -29,7 +29,7 @@ public class ServletLogin extends HttpServlet {
         if(pname.equals("admin") && pass.equals("admin123"))
         {
 //            
-            response.sendRedirect("Dashboard.html");
+            response.sendRedirect("web/Dashboard.html");
         }
         else
         {
